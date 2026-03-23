@@ -207,15 +207,15 @@
         </button>
     </a>
     <h1 class="header-title">Central de Atendimento - Bora Tomar Uma? 🍻</h1>
+    <form method="post" action="enviarsac.php">
 
     <div class="card">
-        <h2>Abrir Novo Ticket</h2>
-        <input type="text" id="nome" placeholder="Seu Nome">
-        <input type="email" id="email" placeholder="Seu Email">
-        <input type="text" id="assunto" placeholder="Assunto">
-        <textarea id="mensagem" rows="4" placeholder="Descreva sua solicitação..."></textarea>
-        <button id="enviar-ticket" class="btn-enviar">Enviar Ticket</button>
-    </div>
+     Nome   <input type="text" id="nome" placeholder="Seu Nome" name="nome">
+     Email   <input type="email" id="email" placeholder="Seu Email" name="email">
+     Assunto  <input type="text" id="assunto" placeholder="Assunto" name="assunto">
+     Mensagem   <textarea id="mensagem" rows="4" placeholder="Descreva sua solicitação..." name="mensagem"></textarea>
+    <button id="enviar-ticket" class="btn-enviar">Enviar Ticket</button>
+</form></div>
 
     <div class="card">
         <h2>Tickets Abertos</h2>
