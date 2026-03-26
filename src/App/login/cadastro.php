@@ -245,27 +245,28 @@
         <h2>Criar conta</h2>
         <p class="subtitle">Junte-se à nossa comunidade cervejeira.</p>
 
-        <form action="#">
-            <div class="input-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="ex: mestre_cervejeiro" required>
-            </div>
+        <form action="cadastrar.php" method="POST">
+    
+    <div class="input-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" placeholder="ex: mestre_cervejeiro" required>
+    </div>
 
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="seu@email.com" required>
-            </div>
+    <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+    </div>
 
-            <div class="input-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="••••••••" required>
-            </div>
+    <div class="input-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+    </div>
 
-            <button type="submit" class="btn-primary">Finalizar Cadastro</button>
-        </form>
+    <button type="submit" class="btn-primary">Finalizar Cadastro</button>
+</form>
 
         <p class="footer-text">Já possui uma conta?</p>
-        <a href="login.html" class="btn-outline">Voltar para o Login 🍻</a>
+        <a href="login.php" class="btn-outline">Voltar para o Login 🍻</a>
     </div>
 
 </body>
