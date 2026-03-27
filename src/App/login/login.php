@@ -99,10 +99,10 @@
                 <p class="text-gray-400 mt-2 text-sm">Entre para encontrar sua gelada.</p>
             </header>
             
-            <form id="login-form" method="POST" action="recebe.php" class="space-y-5">
+            <form id="login-form" method="POST" action="recebelogin.php" class="space-y-5">
                 <div class="space-y-1">
-                    <label for="login-usuario" class="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1">Usuário</label>
-                    <input type="text" id="login-usuario" name="login" placeholder="ex: mestre_cervejeiro" 
+                    <label for="login-usuario" class="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1">E-mail</label>
+                    <input type="text" id="login-usuario" name="login" placeholder="seu@email.com" 
                            class="w-full px-5 py-3.5 rounded-2xl bg-white/10 border border-white/10 focus:border-kivy-primary focus:outline-none focus:ring-1 focus:ring-kivy-primary transition-all placeholder:text-gray-600" required>
                 </div>
 
