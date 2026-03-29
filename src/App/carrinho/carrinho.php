@@ -23,10 +23,9 @@
         header{padding:18px 28px;display:flex;align-items:center;gap:18px}
         .logo{font-size:26px;font-weight:800;color:var(--accent)}
         
-        /* Estilos para o Aviso de Delivery */
         .delivery-notice-container {
             max-width: var(--max-width);
-            margin: 10px auto 18px; /* Centraliza e adiciona margem inferior */
+            margin: 10px auto 18px;
             padding: 0 22px;
         }
         .delivery-notice {
@@ -35,20 +34,15 @@
             gap: 10px;
             padding: 12px 18px;
             border-radius: var(--radius);
-            background-color: var(--accent-dark); /* Fundo com a cor de destaque escura */
+            background-color: var(--accent-dark);
             color: #fff;
             font-weight: 700;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
-        .delivery-notice .fa-motorcycle {
-            font-size: 1.2em; /* Ícone um pouco maior */
-        }
         
         .app{max-width:var(--max-width);margin:18px auto;padding:22px;display:grid;grid-template-columns:1fr 420px;gap:22px}
-
         .panel{background:linear-gradient(180deg,var(--card), #0f0f0f);padding:18px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
         .panel h2{margin:0 0 12px 0}
-
         .cart-items{display:flex;flex-direction:column;gap:12px;max-height:420px;overflow:auto;padding-right:6px}
         .cart-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));border-left:6px solid rgba(255,107,53,0.06)}
         .ci-thumb{width:72px;height:84px;border-radius:8px;overflow:hidden;flex:0 0 72px}
@@ -56,124 +50,78 @@
         .ci-main{flex:1}
         .ci-main .name{font-weight:700}
         .ci-meta{color:var(--muted);font-size:13px}
-
         .qty-control{display:flex;gap:8px;align-items:center;margin-top:8px}
         .qty-btn{background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);padding:6px 10px;border-radius:8px;cursor:pointer}
         .remove-btn{background:transparent;border:0;color:#ff7b7b;cursor:pointer}
-
         .checkout-panel{display:flex;flex-direction:column;gap:12px}
         .summary{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02))}
         .summary .row{display:flex;justify-content:space-between;align-items:center;padding:6px 0}
         .summary .total{font-weight:900;font-size:20px;color:var(--accent)}
-
         .payments{margin-top:8px}
         .payment-option{display:flex;align-items:center;gap:10px;padding:12px;border-radius:10px;background:linear-gradient(180deg,#0f0f0f,#101010);border:1px solid rgba(255,255,255,0.02);cursor:pointer;margin-bottom:10px}
-        .payment-option input{transform:scale(1.1)}
-
         .payment-fields{display:none;padding:14px;border-radius:10px;background:linear-gradient(180deg,#0b0b0b,#101010);border:1px solid rgba(255,255,255,0.02)}
         .field{display:block;margin-bottom:10px}
-        .field input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:#0b0b0b;color:#fff}
-        
-        /* Garante o estilo escuro para todos os inputs dentro de payment-fields */
-        .payment-fields input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.03);
-            background: #0b0b0b;
-            color: #fff;
-        }
-
-        /* Estiliza o novo bloco de Delivery para ter um fundo levemente diferente */
-        .panel-section {
-            padding: 14px;
-            border-radius: 12px;
-            background: linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));
-        }
-
-        /* Estiliza o Textarea (caixinha do motoboy) */
-        .delivery-fields textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.03);
-            background: #0b0b0b; /* Fundo Escuro */
-            color: #fff;
-            min-height: 80px; /* Altura mínima para observações */
-            resize: vertical; /* Permite redimensionar apenas verticalmente */
-        }
-
+        .field input, .delivery-fields textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:#0b0b0b;color:#fff}
+        .panel-section {padding: 14px;border-radius: 12px;background: linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));}
         .btn-primary{display:inline-block;background:var(--accent);color:#081223;padding:12px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
         .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);padding:10px;border-radius:8px;cursor:pointer}
-
-        /* NOVO ESTILO: Botão Limpar com design do Finalizar (btn-primary) */
-        .btn-secondary {
-            background: var(--accent); /* Usa a cor principal */
-            color: #081223; /* Cor do texto escuro */
-            font-weight: 700;
-            border: 0; /* Remove a borda padrão do btn-ghost */
-        }
-        
+        .btn-secondary {background: var(--accent);color: #081223;font-weight: 700;border: 0;}
         .pix-row{display:flex;gap:10px;align-items:center}
         .pix-code{flex:1;padding:10px;border-radius:8px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.03);color:#fff}
         .pix-copy{padding:10px 14px;border-radius:8px;background:#0077ff;border:0;color:#fff;cursor:pointer}
         .pix-msg{color:#5eead4;margin-left:8px;display:none}
-
-        .qr-wrap{margin-top:10px}
         .qr-wrap img{width:160px;height:160px;border-radius:8px}
-
         .modal{position:fixed;left:0;top:0;width:100%;height:100%;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:1000}
         .modal.active{display:flex}
         .modal-card{background:var(--card);padding:20px;border-radius:12px;width:380px}
         .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+        .botao-seta {background-color: #ff6b35;color: white;padding: 15px;border: none;border-radius: 50px;font-weight: bold;cursor: pointer;transition: all 0.3s ease;display: inline-flex;align-items: center;gap: 10px;margin-left: 100px;}
+        @media (max-width:980px){.app{grid-template-columns:1fr;}.botao-seta{margin-left: 22px;width: calc(100% - 44px);justify-content: center;}}
 
-        @media (max-width:980px){.app{grid-template-columns:1fr;}}
-
-.botao-seta {
-    background-color: #ff6b35;
-    color: white;
-    padding: 15px 15px;
-    border: none;
-    border-radius: 50px; /* Estilo 'pílula' mais moderno */
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 100px;
-  }
-  /* Ajuste exclusivo para Celulares */
-@media (max-width: 768px) {
-    .botao-seta {
-        margin-left: 22px; /* Alinha com o preenchimento da página mobile */
-        width: calc(100% - 44px); /* Faz o botão ocupar a largura da tela com respiro */
-        justify-content: center; /* Centraliza o texto "Voltar" dentro do botão */
-        font-size: 16px; /* Melhora a leitura no celular */
-    }
-    
-    .link-botao {
-        display: block;
-        width: 100%;
-    }
+        /* Estiliza os campos de input do cartão e outros */
+.payment-fields input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda levemente visível */
+    background: #0b0b0b; /* Fundo escuro igual ao restante */
+    color: #fff; /* Texto branco */
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-  /* Efeito de movimento na seta ao passar o mouse */
-  .botao-seta:hover {
-    background-color: #e45622;
-    padding-right: 20px; /* O botão estica levemente */
-  }
+/* Efeito ao clicar no campo (foco) */
+.payment-fields input:focus {
+    border-color: var(--accent); /* Cor laranja ao selecionar */
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.2);
+}
 
+/* Ajuste específico para os campos que ficam lado a lado (MM/AA e CVV) */
+#cred-fields div[style*="display:flex"], 
+#deb-fields div[style*="display:flex"] {
+    gap: 12px !important; /* Espaçamento entre os campos pequenos */
+}
+.qr-wrap {
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.03); /* Fundo sutil enquanto carrega */
+    border-radius: 8px;
+}
+
+#qrImg {
+    width: 160px;
+    height: 160px;
+    display: block;
+}
     </style>
 </head>
 <body>
     
     <header>
-        <div style="display:flex;align-items:center;gap:14px">
-            <div class="logo">🍻 Bora Tomar Uma?</div>
-        </div>
+        <div class="logo">🍻 Bora Tomar Uma?</div>
     </header>
 
     <div class="delivery-notice-container">
@@ -182,11 +130,11 @@
             <span>Entrega Rápida por Delivery disponível em sua região!</span>
         </div>
     </div>
+
     <a href="../index.html" class="link-botao">
-        <button class="botao-seta">
-            <span>&#11013;</span> Voltar
-        </button>
+        <button class="botao-seta"><span>&#11013;</span> Voltar</button>
     </a>
+
     <div class="app">
         <section class="panel">
             <h2>Itens no Carrinho</h2>
@@ -196,7 +144,6 @@
         <aside class="checkout-panel panel">
             <div class="summary">
                 <div class="row"><div>Subtotal</div><div id="subtotal">R$ 0,00</div></div>
-                <div class="row"><div>Desconto</div><div id="discount">R$ 0,00</div></div>
                 <div class="row"><div class="total">Total</div><div class="total" id="total">R$ 0,00</div></div>
                 <div style="margin-top:12px;display:flex;gap:10px">
                     <button class="btn-primary" id="finishBtn">Finalizar Compra</button>
@@ -206,76 +153,44 @@
             
             <div class="delivery-fields panel-section">
                 <h3 style="margin-bottom:8px">🛵 Contratar Delivery</h3>
-                
-                <div class="field">
-                    <input id="delivery-address" placeholder="Endereço Completo (Rua, Número, Bairro)">
-                </div>
-                
-                <div class="field">
-                    <textarea id="delivery-notes" placeholder="Observações para o Motoboy (Ex: ponto de referência, bloco/apto)"></textarea>
-                </div>
-
-                <div class="field" style="margin-top:10px">
-                    <label for="motoboy-tip" style="font-size:13px;color:var(--muted)">Gorjeta para o Motoboy (opcional)</label>
-                    <input id="motoboy-tip" type="text" placeholder="R$ 0,00">
-                </div>
-                
+                <div class="field"><input id="delivery-address" placeholder="Endereço Completo (Rua, Número, Bairro)"></div>
+                <div class="field"><textarea id="delivery-notes" placeholder="Observações para o Motoboy"></textarea></div>
+                <div class="field"><label style="font-size:13px;color:var(--muted)">Gorjeta para o Motoboy (opcional)</label><input id="motoboy-tip" type="text" placeholder="R$ 0,00"></div>
             </div>
+
             <div class="payments">
                 <h3 style="margin-bottom:8px">Formas de Pagamento</h3>
 
-                <label class="payment-option" id="opt-pix">
-                    <input type="radio" name="payment" value="pix"> <strong>PIX</strong>
-                </label>
-
+                <label class="payment-option" id="opt-pix"><input type="radio" name="payment" value="pix"> <strong>PIX</strong></label>
                 <div id="pix-fields" class="payment-fields">
-                    <div style="display:flex;justify-content:space-between;align-items:center">
-                        <div style="flex:1">
-                            <label style="font-size:13px;color:var(--muted)">Código copia e cola PIX</label>
-                            <div class="pix-row">
-                                <input id="pixCode" class="pix-code" readonly value="00020126580014BR.GOV.BCB.PIX0136SEU_CODIGO_AQUI5204000053039865802BR5920BORATOMA43274000000000">
-                                <button class="pix-copy" id="copyPixBtn">Copiar</button>
-                            </div>
-                            <div class="pix-msg" id="pixMsg">✔ Código PIX copiado!</div>
-                        </div>
-                        <div class="qr-wrap" id="qrWrap">
-                            <img id="qrImg" src="" alt="QR PIX" />
-                        </div>
+                    <label style="font-size:13px;color:var(--muted)">Código copia e cola PIX</label>
+                    <div class="pix-row">
+                        <input id="pixCode" class="pix-code" readonly value="...">
+                        <button class="pix-copy" id="copyPixBtn">Copiar</button>
                     </div>
+                    <div class="pix-msg" id="pixMsg">✔ Código PIX copiado!</div>
+                    <div class="qr-wrap" id="qrWrap"><img id="qrImg" src="" alt="QR PIX" /></div>
                 </div>
 
-                <label class="payment-option" id="opt-cred">
-                    <input type="radio" name="payment" value="credito"> <strong>Cartão de Crédito</strong>
-                </label>
-
+                <label class="payment-option" id="opt-cred"><input type="radio" name="payment" value="credito"> <strong>Cartão de Crédito</strong></label>
                 <div id="cred-fields" class="payment-fields">
-                    <div class="field"><input id="cc-number" placeholder="Número do cartão" maxlength="19"></div>
-                    <div class="field"><input id="cc-name" placeholder="Nome no cartão"></div>
+                    <div class="field"><input id="cc-number" placeholder="0000 0000 0000 0000" maxlength="19"></div>
+                    <div class="field"><input id="cc-name" placeholder="Nome impresso no cartão"></div>
                     <div style="display:flex;gap:8px"><input id="cc-exp" placeholder="MM/AA" maxlength="5"><input id="cc-cvv" placeholder="CVV" maxlength="4"></div>
                 </div>
 
-                <label class="payment-option" id="opt-deb">
-                    <input type="radio" name="payment" value="debito"> <strong>Cartão de Débito</strong>
-                </label>
-
+                <label class="payment-option" id="opt-deb"><input type="radio" name="payment" value="debito"> <strong>Cartão de Débito</strong></label>
                 <div id="deb-fields" class="payment-fields">
-                    <div class="field"><input id="dc-number" placeholder="Número do cartão" maxlength="19"></div>
-                    <div class="field"><input id="dc-name" placeholder="Nome no cartão"></div>
+                    <div class="field"><input id="dc-number" placeholder="0000 0000 0000 0000" maxlength="19"></div>
+                    <div class="field"><input id="dc-name" placeholder="Nome impresso no cartão"></div>
                     <div class="field"><input id="dc-exp" placeholder="MM/AA" maxlength="5"></div>
                 </div>
                 
-                <label class="payment-option" id="opt-cash">
-                    <input type="radio" name="payment" value="dinheiro"> <strong>Dinheiro</strong>
-                </label>
-
+                <label class="payment-option" id="opt-cash"><input type="radio" name="payment" value="dinheiro"> <strong>Dinheiro</strong></label>
                 <div id="cash-fields" class="payment-fields">
-                    <div class="field">
-                        <label for="cash-change" style="font-size:13px;color:var(--muted)">Precisa de troco para quanto? (opcional)</label>
-                        <input id="cash-change" type="text" placeholder="Ex: R$ 50,00">
-                    </div>
+                    <div class="field"><label style="font-size:13px;color:var(--muted)">Precisa de troco para quanto?</label><input id="cash-change" type="text" placeholder="Ex: R$ 50,00"></div>
                 </div>
-                </div>
-
+            </div>
         </aside>
     </div>
 
@@ -291,14 +206,12 @@
     </div>
 
 <script>
-// compatibilidade: 'userCart' (mesmo key usado na sua index)
 let cart = JSON.parse(localStorage.getItem('userCart')) || {};
 
 function money(v){ return 'R$ ' + v.toFixed(2).replace('.', ','); }
 function saveCart(){ localStorage.setItem('userCart', JSON.stringify(cart)); }
 function updateBadge(){ const b = document.getElementById('cart-count'); if(b) b.innerText = Object.values(cart).reduce((s,i)=>s+i.qty,0); }
 
-// Função para obter o valor numérico de um campo formatado em dinheiro
 function getMoneyValue(id) {
     const el = document.getElementById(id);
     if (!el) return 0;
@@ -306,7 +219,6 @@ function getMoneyValue(id) {
     return parseFloat(value) || 0;
 }
 
-// FUNÇÃO RENDERIZAR CARRINHO COM A CORREÇÃO DE CAMINHO DE IMAGEM
 function renderCart(){
     const el = document.getElementById('cartItems'); 
     el.innerHTML = '';
@@ -323,109 +235,53 @@ function renderCart(){
     keys.forEach(k => {
         const it = cart[k];
         subtotal += it.price * it.qty;
-
-        // --- CORREÇÃO DO CAMINHO PARA GITHUB PAGES ---
-        // Se a imagem já vier com "img/", nós adicionamos "../" para sair da pasta carrinho.
-        // Se ela vier com "../img/", removemos o excesso para não duplicar.
         let cleanImgPath = it.img.replace('../', ''); 
         const imgPath = "../" + cleanImgPath;
 
         const div = document.createElement('div'); 
         div.className = 'cart-item';
-        div.innerHTML = `
-            <div class="ci-thumb"><img src="${imgPath}" alt="${it.name}"/></div>
-            <div class="ci-main">
-                <div class="name">${it.name}</div>
-                <div class="ci-meta">${it.qty} × ${money(it.price)}</div>
-                <div class="qty-control">
-                    <button class="qty-btn" onclick="changeQty('${k}', -1)">−</button>
-                    <div style="min-width:28px;text-align:center">${it.qty}</div>
-                    <button class="qty-btn" onclick="changeQty('${k}', 1)">+</button>
-                    <button class="remove-btn" onclick="removeItem('${k}')">Remover</button>
-                </div>
-            </div>
-        `;
+        div.innerHTML = `<div class="ci-thumb"><img src="${imgPath}"/></div><div class="ci-main"><div class="name">${it.name}</div><div class="ci-meta">${it.qty} × ${money(it.price)}</div><div class="qty-control"><button class="qty-btn" onclick="changeQty('${k}', -1)">−</button><div style="min-width:28px;text-align:center">${it.qty}</div><button class="qty-btn" onclick="changeQty('${k}', 1)">+</button><button class="remove-btn" onclick="removeItem('${k}')">Remover</button></div></div>`;
         el.appendChild(div);
     });
 
     const tipAmount = getMoneyValue('motoboy-tip');
     const total = subtotal + tipAmount;
-
     document.getElementById('subtotal').innerText = money(subtotal);
-    document.getElementById('discount').innerText = 'R$ 0,00';
-    
     let tipRow = document.getElementById('tipRow');
     if (!tipRow) {
-        tipRow = document.createElement('div');
-        tipRow.className = 'row';
-        tipRow.id = 'tipRow';
+        tipRow = document.createElement('div'); tipRow.className = 'row'; tipRow.id = 'tipRow';
         tipRow.innerHTML = `<div>Gorjeta</div><div id="tipAmount">${money(tipAmount)}</div>`;
-        const totalRow = document.querySelector('.summary .total').parentNode;
-        totalRow.parentNode.insertBefore(tipRow, totalRow);
+        document.querySelector('.summary .total').parentNode.before(tipRow);
     } else {
         document.getElementById('tipAmount').innerText = money(tipAmount);
         tipRow.style.display = tipAmount > 0 ? 'flex' : 'none';
     }
-
     document.getElementById('total').innerText = money(total);
 }
 
 function changeQty(id,delta){ if(!cart[id]) return; cart[id].qty += delta; if(cart[id].qty<=0) delete cart[id]; saveCart(); renderCart(); updateBadge(); }
 function removeItem(id){ delete cart[id]; saveCart(); renderCart(); updateBadge(); }
 
-renderCart(); 
-updateBadge();
-
-// limpar carrinho
-document.getElementById('clearBtn').addEventListener('click', ()=>{
-    if(confirm('Limpar o carrinho?')){ 
-        cart={}; 
-        saveCart(); 
-        document.getElementById('motoboy-tip').value = '';
-        document.getElementById('cash-change').value = '';
-        renderCart(); 
-        updateBadge(); 
-    }
+// Máscaras de Cartão
+document.querySelectorAll('#cc-number, #dc-number').forEach(input => {
+    input.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ');
+        e.target.value = v;
+    });
 });
-
-// Helpers de Pagamento
-function hideAllPayment(){ document.querySelectorAll('.payment-fields').forEach(d=>d.style.display='none'); }
-function mostrarCampos(id){ hideAllPayment(); document.getElementById(id).style.display='block'; generateQR(); }
-
-function buildPixPayload(amount){
-    const merchant = 'BORATOMA';
-    const amountCents = Math.round(amount*100).toString();
-    return `00020126580014BR.GOV.BCB.PIX01${merchant}5204000053039865405${amountCents}5802BR5920BORATOMA43274000000000`;
-}
-
-function generateQR(){
-    const totalText = document.getElementById('total').innerText.replace('R$ ','').replace(/\./g, '').replace(',','.');
-    const total = parseFloat(totalText)||0;
-    const payload = buildPixPayload(total);
-    const url = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(payload);
-    document.getElementById('qrImg').src = url;
-    document.getElementById('pixCode').value = payload;
-}
-
-document.getElementById('copyPixBtn').addEventListener('click', ()=>{
-    const campo = document.getElementById('pixCode');
-    navigator.clipboard.writeText(campo.value).then(()=>{
-        const m=document.getElementById('pixMsg');
-        m.style.display='inline-block';
-        setTimeout(()=>m.style.display='none',2000);
+document.querySelectorAll('#cc-exp, #dc-exp').forEach(input => {
+    input.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, '');
+        if (v.length >= 2) v = v.substring(0,2) + '/' + v.substring(2,4);
+        e.target.value = v;
     });
 });
 
-// Máscaras e Eventos
 function maskMoney(el) {
     if (!el) return;
     el.addEventListener('input', (e) => {
         let v = e.target.value.replace(/\D/g, '');
-        if (v.length === 0) {
-            e.target.value = '';
-            if (e.target.id === 'motoboy-tip') renderCart();
-            return;
-        }
+        if (v.length === 0) { e.target.value = ''; if (e.target.id === 'motoboy-tip') renderCart(); return; }
         v = v.padStart(3, '0');
         let integerPart = v.slice(0, -2).replace(/^0+/, '') || '0';
         let decimalPart = v.slice(-2);
@@ -439,32 +295,131 @@ maskMoney(document.getElementById('cash-change'));
 const confirmModal = document.getElementById('confirmModal');
 const finishBtn = document.getElementById('finishBtn');
 
+// Função de validação de cartões
+function validarCartao(tipo) {
+    const prefixo = tipo === 'credito' ? 'cc' : 'dc';
+    const numero = document.getElementById(`${prefixo}-number`).value.trim();
+    const nome = document.getElementById(`${prefixo}-name`).value.trim();
+    const exp = document.getElementById(`${prefixo}-exp`).value.trim();
+    const cvv = tipo === 'credito' ? document.getElementById('cc-cvv').value.trim() : "OK";
+    
+    if(!numero || !nome || !exp || !cvv) {
+        alert(`Por favor, preencha todos os dados do cartão de ${tipo}!`);
+        return false;
+    }
+    return true;
+}
+
 finishBtn.addEventListener('click', ()=>{
     if(Object.keys(cart).length===0){ alert('Seu carrinho está vazio!'); return; }
+    
     const method = document.querySelector('input[name="payment"]:checked');
     if(!method){ alert('Escolha uma forma de pagamento'); return; }
+    
+    const endereco = document.getElementById('delivery-address').value.trim();
+    if(!endereco){ alert('Por favor, informe o endereço de entrega!'); return; }
+
+    if(method.value === 'credito' || method.value === 'debito') {
+        if(!validarCartao(method.value)) return;
+    }
+
     document.getElementById('confirmAmount').innerText = document.getElementById('total').innerText;
     confirmModal.classList.add('active');
 });
 
 document.getElementById('modalCancel').addEventListener('click', ()=>{ confirmModal.classList.remove('active'); });
-
-document.getElementById('modalOk').addEventListener('click', ()=>{
+document.getElementById('modalOk').addEventListener('click', async () => {
+    // 1. Fecha o modal
     confirmModal.classList.remove('active');
-    const method = document.querySelector('input[name="payment"]:checked').value;
-    alert('Pedido via '+method.toUpperCase()+ ' realizado! Obrigado pela compra 😊');
-    cart = {};
-    saveCart();
-    renderCart();
-    updateBadge();
+
+    // 2. Captura o método de pagamento selecionado
+    const metodoInput = document.querySelector('input[name="payment"]:checked');
+    const metodo = metodoInput ? metodoInput.value : '';
+
+    // 3. Prepara o objeto de dados
+    const dadosPedido = {
+        carrinho: Object.values(cart),
+        endereco: document.getElementById('delivery-address').value,
+        observacoes: document.getElementById('delivery-notes').value,
+        gorjeta: document.getElementById('motoboy-tip').value || "0", // Ex: "R$ 5,00"
+        pagamento: metodo,
+        total: document.getElementById('total').innerText, // Ex: "R$ 50,00"
+        // Captura o valor do troco apenas se for dinheiro
+        troco_para: metodo === 'dinheiro' ? document.getElementById('cash-change').value : null
+    };
+
+    console.log("Enviando dados:", dadosPedido); // Use o F12 no navegador para ver se isso aparece
+
+    try {
+        const resposta = await fetch('salvar_pedido.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(dadosPedido)
+        });
+
+        // Verifica se a resposta do servidor é válida
+        if (!resposta.ok) {
+            const erroTexto = await resposta.text();
+            throw new Exception("Erro no servidor: " + erroTexto);
+        }
+
+        const resultado = await resposta.json();
+
+       if (resultado.sucesso) {
+            alert('✅ ' + resultado.mensagem);
+            
+            // 1. Limpa o carrinho local
+            cart = {};
+            saveCart();
+            
+            // 2. Limpa os campos de texto
+            document.getElementById('delivery-address').value = '';
+            document.getElementById('cash-change').value = '';
+            
+            // 3. REDIRECIONA para a index após o usuário clicar em OK no alert
+            window.location.href = "../index.html?sucesso=1";
+        } else {
+            alert('❌ Erro: ' + resultado.erro);
+        }
+    } catch (error) {
+        console.error('Erro detalhado:', error);
+        alert('Houve um erro ao conectar com o servidor. Verifique o console (F12).');
+    }
+});
+function mostrarCampos(id){ 
+    document.querySelectorAll('.payment-fields').forEach(d=>d.style.display='none');
+    document.getElementById(id).style.display='block'; 
+    if(id === 'pix-fields') generateQR();
+}
+document.getElementById('opt-pix').addEventListener('click', () => {
+    mostrarCampos('pix-fields');
+    generateQR(); // Adicione isso aqui para garantir que gere ao clicar
 });
 
-document.getElementById('opt-pix').addEventListener('click', ()=>{ mostrarCampos('pix-fields'); });
-document.getElementById('opt-cred').addEventListener('click', ()=>{ mostrarCampos('cred-fields'); });
-document.getElementById('opt-deb').addEventListener('click', ()=>{ mostrarCampos('deb-fields'); });
-document.getElementById('opt-cash').addEventListener('click', ()=>{ mostrarCampos('cash-fields'); });
+function generateQR(){
+    // Pega o texto do total, remove "R$", pontos de milhar e troca vírgula por ponto
+    const totalTexto = document.getElementById('total').innerText;
+    const totalLimpo = totalTexto.replace('R$ ', '').replace(/\./g, '').replace(',', '.');
+    
+    const payload = `00020126580014BR.GOV.BCB.PIX0108BORATOMA520400005303986540${totalLimpo}5802BR5920BORATOMA43274000000000`;
+    
+    const qrImg = document.getElementById('qrImg');
+    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + encodeURIComponent(payload);
+}
 
+document.getElementById('copyPixBtn').addEventListener('click', ()=>{
+    navigator.clipboard.writeText(document.getElementById('pixCode').value).then(()=>{
+        document.getElementById('pixMsg').style.display='inline-block';
+        setTimeout(()=>document.getElementById('pixMsg').style.display='none',2000);
+    });
+});
 
+document.getElementById('opt-pix').addEventListener('click', ()=>mostrarCampos('pix-fields'));
+document.getElementById('opt-cred').addEventListener('click', ()=>mostrarCampos('cred-fields'));
+document.getElementById('opt-deb').addEventListener('click', ()=>mostrarCampos('deb-fields'));
+document.getElementById('opt-cash').addEventListener('click', ()=>mostrarCampos('cash-fields'));
+
+renderCart(); updateBadge();
 </script>
 </body>
 </html>
