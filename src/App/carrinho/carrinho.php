@@ -413,6 +413,16 @@ document.getElementById('copyPixBtn').addEventListener('click', ()=>{
         setTimeout(()=>document.getElementById('pixMsg').style.display='none',2000);
     });
 });
+// Função para o botão Limpar
+document.getElementById('clearBtn').addEventListener('click', () => {
+    if (confirm('Tem certeza que deseja esvaziar todo o carrinho?')) {
+        cart = {}; // Esvazia o objeto do carrinho
+        saveCart(); // Atualiza o localStorage
+        renderCart(); // Recarrega a interface visual
+        updateBadge(); // Atualiza o contador (se houver)
+        alert('Carrinho limpo com sucesso!');
+    }
+});
 
 document.getElementById('opt-pix').addEventListener('click', ()=>mostrarCampos('pix-fields'));
 document.getElementById('opt-cred').addEventListener('click', ()=>mostrarCampos('cred-fields'));
